@@ -14,10 +14,14 @@
     while (currentNode) {
       const div = document.createElement('div');
       div.className = 'item';
+      
       const span = document.createElement('span');
+      span.className ='item-text';
       span.textContent = currentNode._price;
       
-      const close = document.createElement('span');
+      const close = document.createElement('a');
+      close.className = 'close';
+      
       span.appendChild(close);
       div.appendChild(span);
       elements.appendChild(div);
